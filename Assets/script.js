@@ -16,9 +16,9 @@ let time = moment();
 
 let saveBtn = $(".saveBtn");
 
+// Sets current time and checks for empty event slots.
 function setAppointment() {
     $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
-
 
     $(".time-block").each(function () {
         let id = $(this).attr("id");
@@ -28,13 +28,32 @@ function setAppointment() {
             $(this).children(".appointment").val(appointment);
         }
     });
-}
+};
 
 setAppointment();
 
+// Saves user input to the local storage with an associated time
 saveBtn.on("click", function () {
     let time = $(this).parent().attr("id");
-    let schedule = $(this).siblings(".schedule").val();
-
-    localStorage.setItem(time, schedule);
+    let appointment = $(this).siblings(".appointment").val();
+    localStorage.setItem(time, appointment);
 });
+
+// Highlights event based on current time and if event is past, present, or in the future.
+function highlightEvent() {
+    hour = time.hours();
+    $(".time-block").each(function () {
+        let thisHour = parseInt($(this).attr("id"));
+        if (thisHour > hour) {
+            $(this).addClass("future")
+        }
+        else if (thisHour === hour) {
+            $(this).addClass("present");
+        }
+        else {
+            $(this).addClass("past");
+        }
+    })
+};
+
+highlightEvent();
