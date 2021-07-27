@@ -12,3 +12,29 @@ let block11 = $("#17");
 let block12 = $("#18");
 let block13 = $("#19");
 
+let time = moment();
+
+let saveBtn = $(".saveBtn");
+
+function setAppointment() {
+    $("#currentDay").text(moment().format("dddd, MMMM Do YYYY"));
+
+
+    $(".time-block").each(function () {
+        let id = $(this).attr("id");
+        let appointment = localStorage.getItem(id);
+
+        if (appointment !== null) {
+            $(this).children(".appointment").val(appointment);
+        }
+    });
+}
+
+setAppointment();
+
+saveBtn.on("click", function () {
+    let time = $(this).parent().attr("id");
+    let schedule = $(this).siblings(".schedule").val();
+
+    localStorage.setItem(time, schedule);
+});
