@@ -32,8 +32,8 @@ THEN the saved events persist
 
 ## How to use
 
-- [Deployed URL]()
-- [Repo URL]()
+- [Deployed URL](https://dmosca2021.github.io/dm_hmwk_wk5_calendarApp/)
+- [Repo URL](https://github.com/DMosca2021/dm_hmwk_wk5_calendarApp)
 
 The following animation demonstrates what the application should look like and it's functionality:
 
