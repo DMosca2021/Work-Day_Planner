@@ -2,11 +2,7 @@
 
 ## Description
 
-- need to rewrite this to describe the app and what i learned from the assignment 
-
-Create a simple calendar application that allows a user to save events for each hour of the day by modifying starter code. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
-
-You'll need to use the [Moment.js](https://momentjs.com/) library to work with date and time. Be sure to read the documentation carefully and concentrate on using Moment.js in the browser.
+The goal of this homework assignment was to display my knowledge of third party API's. I utilized pre packaged code from Bootstrap, Moment.js and jQuery to implement a dynamic web app that will update based on the time of day.
 
 ## User Story
 
@@ -34,16 +30,21 @@ WHEN I refresh the page
 THEN the saved events persist
 ```
 
+## How to use
+
+- [Deployed URL]()
+- [Repo URL]()
+
 The following animation demonstrates what the application should look like and it's functionality:
 
 ![A user clicks on slots on the color-coded calendar and edits the events.](./Assets/05-third-party-apis-homework-demo.gif)
 
-This is a screenshot from the application
-
-- screen shot url goes here
+To use the scheduler, simply input text into the field and hit the save button. Once refreshing the page the event will be saved and depending on the time of day will be highlighted to represent if the event has passed, is current, or is in the future. 
 
 ## Credits 
 
-- Add regular class/BC shoutout 
-- bootstaps website
-- google
+Credit for this project goes to my instructor, teacher's assistants, tutor, and fellow students in the DUbootcamp who provided the information and resources I needed to complete this task.
+
+- [Bootstrap](https://getbootstrap.com/)
+- [Moment.js](https://momentjs.com/)
+- [Google](https://www.google.com/)
